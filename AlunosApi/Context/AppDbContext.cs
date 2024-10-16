@@ -12,6 +12,7 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
     }
 
     public DbSet<Aluno> Alunos { get; set; }
+    public DbSet<RefreshToken> RefreshTokens { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -54,5 +55,7 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
                     DataCadastro = DateTime.Now
                 });
         });
+
+        modelBuilder.Entity<RefreshToken>().HasOne(rt => rt.User).WithMany().HasForeignKey(rt => rt.UserId);
     }
 }

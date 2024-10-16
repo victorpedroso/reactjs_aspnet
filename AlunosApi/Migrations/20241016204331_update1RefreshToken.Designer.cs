@@ -4,6 +4,7 @@ using AlunosApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlunosApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241016204331_update1RefreshToken")]
+    partial class update1RefreshToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +58,7 @@ namespace AlunosApi.Migrations
                         new
                         {
                             Id = 1,
-                            DataCadastro = new DateTime(2024, 10, 16, 17, 52, 3, 45, DateTimeKind.Local).AddTicks(9391),
+                            DataCadastro = new DateTime(2024, 10, 16, 17, 43, 31, 326, DateTimeKind.Local).AddTicks(5014),
                             Email = "aluno1@localhost.com",
                             Idade = 19,
                             Nome = "Aluno 1"
@@ -63,7 +66,7 @@ namespace AlunosApi.Migrations
                         new
                         {
                             Id = 2,
-                            DataCadastro = new DateTime(2024, 10, 16, 17, 52, 3, 45, DateTimeKind.Local).AddTicks(9416),
+                            DataCadastro = new DateTime(2024, 10, 16, 17, 43, 31, 326, DateTimeKind.Local).AddTicks(5030),
                             Email = "aluno2@localhost.com",
                             Idade = 23,
                             Nome = "Aluno 2"
@@ -80,6 +83,9 @@ namespace AlunosApi.Migrations
 
                     b.Property<DateTime>("Expiration")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsExpired")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Token")
                         .HasColumnType("nvarchar(max)");

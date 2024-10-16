@@ -294,3 +294,4 @@ C:\Users\VictorPedroso\Desktop\dev\Backend\AlunosApi\AlunosApi\obj\Debug\net8.0\
 C:\Users\VictorPedroso\Desktop\dev\Backend\AlunosApi\AlunosApi\obj\Debug\net8.0\AlunosApi.csproj.Up2Date
 C:\Users\VictorPedroso\Desktop\dev\Backend\AlunosApi\AlunosApi\obj\Debug\net8.0\AlunosApi.genruntimeconfig.cache
 C:\Users\VictorPedroso\Desktop\dev\Backend\AlunosApi\AlunosApi\obj\Debug\net8.0\ref\AlunosApi.dll
+C:\Users\VictorPedroso\Desktop\dev\Backend\AlunosApi\AlunosApi\obj\Debug\net8.0\AlunosApi.sourcelink.json

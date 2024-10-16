@@ -4,6 +4,7 @@ using AlunosApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AlunosApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241016192920_addRefreshToken")]
+    partial class addRefreshToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +58,7 @@ namespace AlunosApi.Migrations
                         new
                         {
                             Id = 1,
-                            DataCadastro = new DateTime(2024, 10, 16, 17, 52, 3, 45, DateTimeKind.Local).AddTicks(9391),
+                            DataCadastro = new DateTime(2024, 10, 16, 16, 29, 17, 562, DateTimeKind.Local).AddTicks(9486),
                             Email = "aluno1@localhost.com",
                             Idade = 19,
                             Nome = "Aluno 1"
@@ -63,7 +66,7 @@ namespace AlunosApi.Migrations
                         new
                         {
                             Id = 2,
-                            DataCadastro = new DateTime(2024, 10, 16, 17, 52, 3, 45, DateTimeKind.Local).AddTicks(9416),
+                            DataCadastro = new DateTime(2024, 10, 16, 16, 29, 17, 562, DateTimeKind.Local).AddTicks(9499),
                             Email = "aluno2@localhost.com",
                             Idade = 23,
                             Nome = "Aluno 2"
